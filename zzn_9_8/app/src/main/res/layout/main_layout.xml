@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ly_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/homepage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_background"
+            android:drawableTop="@drawable/tab_homepage"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="首页"
+            android:textColor="@drawable/tab_menu_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/gps"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_background"
+            android:drawableTop="@drawable/tab_gps"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="定位"
+            android:textColor="@drawable/tab_menu_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/weather"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_background"
+            android:drawableTop="@drawable/tab_weather"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="气象"
+            android:textColor="@drawable/tab_menu_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/me"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_background"
+            android:drawableTop="@drawable/tab_me"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="我的"
+            android:textColor="@drawable/tab_menu_text"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/ly_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ly_tab_bar">
+    </FrameLayout>
+</RelativeLayout>

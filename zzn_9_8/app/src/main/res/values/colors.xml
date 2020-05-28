@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="bar_background_transparent">#FFFFFF</color>
+    <color name="bar_background_pressed">#F1F3F4</color>
+    <color name="top_bar">#dbd9cd</color>
+    <color name="golden">#f0cd76</color>
+    <color name="text_pressed">#FFC800</color>
+    <color name="text_unpressed">#8D7A71</color>
+    <color name="login_button">#AFB9BA</color>
+    <color name="text_black"> #272727</color>
+</resources>

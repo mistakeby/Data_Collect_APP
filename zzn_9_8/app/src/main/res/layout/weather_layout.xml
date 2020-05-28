@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/bar_background_transparent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0.5">
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            />
+        <EditText
+            android:id="@+id/message_commit"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:textSize="15sp"
+            android:background="@drawable/edit_text_background"
+            android:hint="输入要查询的城市名"
+            android:textColorHint="@color/text_black" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            />
+        <Button
+            android:id="@+id/commit"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="提交"
+            android:textSize="15sp"
+            android:background="@drawable/edit_text_background"
+            android:layout_weight="1"
+            android:textColor="@color/text_black"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            />
+        <Button
+            android:id="@+id/default_city"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="默认"
+            android:textSize="15sp"
+            android:background="@drawable/edit_text_background"
+            android:layout_weight="1"
+            android:textColor="@color/text_black"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/wind_dir"
+        android:text="风向"
+        android:layout_width="0dp"
+        android:textSize="16sp"
+        android:textColor="@color/text_black"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/wind_dir_1"
+            android:text="西北"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/wind_sc"
+        android:text="风力"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="@color/text_black"
+        />
+        <TextView
+            android:id="@+id/wind_sc_1"
+            android:text="4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/hum"
+            android:text="相对湿度"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black" />
+        <TextView
+            android:id="@+id/hum_1"
+            android:text="38"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/vis"
+            android:text="能见度"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black"  />
+        <TextView
+            android:id="@+id/vis_1"
+            android:text="10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black"  />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/qlty"
+            android:text="空气质量"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black" />
+        <TextView
+            android:id="@+id/qlty_1"
+            android:text="优"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/main"
+            android:text="主要污染物"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black"/>
+        <TextView
+            android:id="@+id/main_1"
+            android:text="PM2.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/pm25"
+            android:text="PM2.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black"/>
+        <TextView
+            android:id="@+id/pm25_1"
+            android:text="55"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/pm10"
+            android:text="PM10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black" />
+        <TextView
+            android:id="@+id/pm10_1"
+            android:text="83"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/no2"
+            android:text="二氧化氮"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black" />
+        <TextView
+            android:id="@+id/no2_1"
+            android:text="44"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/so2"
+            android:text="二氧化硫"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black" />
+        <TextView
+            android:id="@+id/so2_1"
+            android:text="20"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/co"
+            android:text="一氧化氮"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black" />
+        <TextView
+            android:id="@+id/co_1"
+            android:text="1.2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/text_black" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_weight="0.5">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:id="@+id/current_city"
+            android:text="当前城市:北京市"
+            android:textColor="@color/text_black"
+            android:textSize="15sp"
+            android:layout_gravity="right"/>
+        <TextView
+            android:layout_width="8dp"
+            android:layout_height="5dp" />
+    </LinearLayout>
+
+</LinearLayout>
