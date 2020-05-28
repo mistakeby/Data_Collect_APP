@@ -50,7 +50,9 @@
 
 ![image-20200528170659288](Readme.assets/image-20200528170659288.png)
 
-## ![image-20200528171143321](Readme.assets/image-20200528171143321.png)APP效果展示
+![image-20200528171143321](Readme.assets/image-20200528171143321.png)
+
+## APP效果展示
 
 <img src="Readme.assets/image-20200528171630123.png" alt="image-20200528171630123" style="zoom:25%;" />
 
