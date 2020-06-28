@@ -107,6 +107,8 @@ public class Fragment_Homepage extends Fragment implements SensorEventListener {
     /****************************关于获取天气温度信息*************************/
     private String la_titude = null;//纬度
     private String long_titude = null;//经度
+    private String la_titude_2 = null;//纬度
+    private String long_titude_2 = null;//经度
     private boolean weather_start = false;
     private String temperature = null;
     private String weather_condition = null;
@@ -296,9 +298,11 @@ public class Fragment_Homepage extends Fragment implements SensorEventListener {
             /************************text控件显示街道和经纬度*************/
             double l1 = location.getLatitude();//纬度
             la_titude = String.valueOf(l1);
+            la_titude_2=la_titude.substring(0,4);
             la_titude="纬度："+la_titude.substring(0,6);
             double l2 = location.getLongitude();
             long_titude = String.valueOf(l2);
+            long_titude_2=long_titude;
             long_titude="经度："+long_titude.substring(0,6);
             city_homepage = location.getCity();
             District = location.getDistrict();
@@ -346,13 +350,14 @@ public class Fragment_Homepage extends Fragment implements SensorEventListener {
                     Toast.makeText(mainActivity, "拍照成功", Toast.LENGTH_SHORT).show();
                     if(radiobutton.equals("自然灾害"))
                     {
-                        pass_information();
+                        Intent intent = new Intent(mainActivity, DisasterDialog.class);
+                        pass_information_photo(intent);
 
                     }
                     else
                     {
                         Intent intent = new Intent(mainActivity, ResourceDialog.class);
-                        startActivity(intent);
+                        pass_information_photo(intent);
                     }
                 }
                 break;
@@ -365,19 +370,20 @@ public class Fragment_Homepage extends Fragment implements SensorEventListener {
                     Toast.makeText(mainActivity, "录像成功", Toast.LENGTH_SHORT).show();
                     if(radiobutton.equals("自然灾害"))
                     {
-                        pass_information();
+                        Intent intent = new Intent(mainActivity, DisasterDialog.class);
+                        pass_information_video(intent);
                     }
                     else
                     {
                         Intent intent = new Intent(mainActivity, ResourceDialog.class);
-                        startActivity(intent);
+                        pass_information_video(intent);
                     }
                 }
             default:
                 break;
         }
     }
-    private void pass_information()
+    private void pass_information_photo(Intent intent)
     {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date current=new Date();
@@ -385,14 +391,32 @@ public class Fragment_Homepage extends Fragment implements SensorEventListener {
         current_time=format.format(current);
         String filepath=image_photo_path+"/"+output_image;
         String savepath="/"+userid+"/photo/"+output_image;
-        String all=userid+","+o_1_2+","+o_2_2+","+o_3_2+","+light_2+","+radiobutton+","+la_titude+","+city_homepage
-                +","+street +","+savepath+current_time;
-        MainActivity mainActivity = (MainActivity) getActivity();
-        Intent intent = new Intent(mainActivity, DisasterDialog.class);
+        String filetype="pic";
+       /* String all=userid+","+filetype+","+o_1_2+","+o_2_2+","+o_3_2+","+light_2+","+radiobutton+","+la_titude_2+","+long_titude_2+","+city_homepage
+                +","+District+","+street +","+savepath+","+current_time;*/
+        String all=userid+","+filetype+","+light_2+","+radiobutton+","+la_titude_2+","+city_homepage
+                +","+District +","+savepath+","+current_time;
+        //MainActivity mainActivity = (MainActivity) getActivity();
+      //  Intent intent = new Intent(mainActivity, DisasterDialog.class);
         intent.putExtra("all",all).putExtra("filepath",filepath).putExtra("image",output_image);
         startActivity(intent);
     }
-
+    private void pass_information_video(Intent intent)
+    {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date current=new Date();
+        String current_time;
+        current_time=format.format(current);
+        String filepath=image_video_path+"/"+output_video;
+        String savepath="/"+userid+"/videp/"+output_video;
+        String filetype="vid";
+       /* String all=userid+","+filetype+","+o_1_2+","+o_2_2+","+o_3_2+","+light_2+","+radiobutton+","+la_titude_2+","+long_titude_2+","+city_homepage
+                +","+District+","+street +","+savepath+","+current_time;*/
+        String all=userid+","+filetype+","+light_2+","+radiobutton+","+la_titude_2+","+city_homepage
+                +","+District +","+savepath+","+current_time;
+        intent.putExtra("all",all).putExtra("filepath",filepath).putExtra("image",output_video);
+        startActivity(intent);
+    }
 
     public void get_weather_okhttp(String str_url) {
         final String URL_1 = "https://free-api.heweather.net/s6/weather/" + "now?location=" + str_url + "&key=1fe21d8406904fd5875894469cae3007";

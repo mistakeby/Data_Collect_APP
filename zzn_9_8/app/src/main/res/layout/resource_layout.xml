@@ -65,13 +65,13 @@
             android:layout_weight="0.5"
             android:layout_height="match_parent" />
         <TextView
-            android:id="@+id/text_l"
+            android:id="@+id/text_1"
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:textSize="15sp"
             android:textColor="@color/text_black"
             android:gravity="center"
-            android:text="灾害程度"
+            android:text="审计目的"
             android:layout_weight="1.5" />
         <EditText
             android:id="@+id/edit_1"
